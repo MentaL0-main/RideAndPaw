@@ -6,7 +6,7 @@ class Player
 {
 public:
     void SetPosition(Vector2 p) { position = p; }
-    void SetTarget(Vector2 t) { target = t; }
+    void SetAngle(float a) { angle = a; }
 
     void SetColor(Color c) { color = c; }
 
@@ -17,10 +17,10 @@ public:
     void SetFireSpeed(float fs) { fireSpeed = fs; }
 
     Vector2 GetPosition() const { return position; }
-    Vector2 GetTarget() const { return target; }
     
     Color GetColor() const { return color; }
 
+    float GetAngle() const { return angle; }
     float GetSpeed() const { return speed; }
     float GetRadius() const { return radius; }
     float GetFireTickRate() const { return fireTickRate; }
@@ -33,10 +33,11 @@ public:
 
 private:
     Vector2 position;
-    Vector2 target;
+    Vector2 endGunLine = {0, 0};
 
     Color color;
 
+    float angle;
     float radius;
     float speed;
     float fireTickRate;
