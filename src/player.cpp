@@ -4,7 +4,6 @@
 
 void Player::Proccess()
 {
-    
 }
 
 void Player::Draw()
